@@ -1,0 +1,16 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "22"
+  NETLIFY = "true"
+  VITE_SUPABASE_URL = "https://pewhzyjibtfnnvevizpm.supabase.co"
+  VITE_SUPABASE_PUBLISHABLE_KEY = "sb_publishable_5LNs9-plVBvC82tbanw9fw_QyqklYNv"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    X-Content-Type-Options = "nosniff"
